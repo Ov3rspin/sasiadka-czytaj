@@ -22,6 +22,7 @@
     "postcss-cli": "^4.1.1"
   },
   "dependencies": {
+    "bootstrap": "^5.0.0-beta1",
     "jquery": "^3.5.1",
     "live-server": "^1.2.1"
   }
