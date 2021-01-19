@@ -1,0 +1,120 @@
+.about {
+    background-color: $color-white;
+    padding-bottom: 10rem;
+
+    &-title {
+        padding: 2rem 0;
+        text-align: center;
+        position: relative;
+        top: -4rem;
+        background-color: $color-white;
+        border-radius: 10px;
+    }
+
+    &-icon {
+        font-size: 3rem;
+        color: $color-primary;
+        text-align: center;
+    }
+
+    p {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    span {
+        color: $color-primary;
+        font-size: 2rem;
+    }
+
+    &-box {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    &-text {
+        box-shadow: $shadow-dark;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        padding: 2rem;
+        transition: all .2s;
+    }
+
+    &-text:hover {
+        transform: translateY(-1.01rem);
+    }
+
+    &-map {
+        border-radius: 10px;
+        box-shadow: $shadow-dark;
+        position: relative;
+        transition: all .2s;
+        display: flex;
+        align-items: center;
+
+        div {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        img {
+            height: 83%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+        }
+    }
+
+    &-map:hover {
+        transform: translateY(-1.01rem);
+    }
+}
+
+// MEDIA
+
+@media (max-width: 1200px) {
+    .about {
+        &-map {
+            display: flex;
+            align-items: center;
+
+            div { height: 68%; }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .about {
+        padding-bottom: 10rem;
+    
+        &-box {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &-map {
+            position: relative;
+            height: auto;
+            max-width: 100%;
+    
+            div {
+                position: absolute;
+                height: auto;
+                max-width: 100%;
+                display: block;
+            }
+    
+            img {
+                height: auto;
+                width: auto;
+                position: absolute;
+            }
+        }
+    }
+}
+

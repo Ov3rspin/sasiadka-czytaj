@@ -1,0 +1,61 @@
+// MAIN NAV //
+
+.navbar {
+    height: 10vh;
+    font-size: 2rem;
+    color: $color-white;
+
+    &-brand {
+        font-size: 3rem;
+        color: $color-primary;
+        
+        &:hover {
+            color: $color-primary;
+            transform: scale(1.01);
+        }
+    }
+    &-toggler {
+        position: relative;
+        top: .5rem;
+        font-size: 2.5rem;
+
+        i::before {
+            content: "\f0c9";
+            color: $color-primary;
+        }
+    }
+
+    &-collapse {
+        background-color: $color-white;
+        border-radius: 10px;
+    }
+
+    &-nav { margin-left: auto; }
+
+    .nav-item {
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .nav-link:link,
+    .nav-link:visited {
+        display: inline-block;
+        padding: .5rem 2.3rem;
+        color: $color-grey-dark-3;;
+        text-decoration: none;
+        background-image: linear-gradient(120deg,
+            transparent 0%, 
+            transparent 50%, 
+            $color-primary 50%);
+        background-size: 220%;
+        border-radius: 10px;
+        transition: all .4s;
+    }
+
+    .nav-link:hover,
+    .nav-link:active {
+        background-position: 100%;
+        color: $color-white;
+        transform: translateX(1rem);
+    }
+}

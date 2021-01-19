@@ -1,0 +1,72 @@
+.table {
+    width: 100%;
+    border: 1px solid $color-table-border;
+    font-size: 1.2rem;
+
+    .h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    td {
+        padding: 1rem;
+        border: 1px solid $color-table-border;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    &-title {
+        color: $color-primary;
+        font-size: 1.3rem;
+        font-weight: 700;
+        border: 1px solid $color-table-border;
+
+        &-price { border: 1px solid $color-table-border; }
+    }
+
+    &-small {
+        width: 100%;
+        border: 1px solid $color-table-border;
+    }
+}
+
+@media (max-width: 991px) {
+    .table {
+    
+        &-small {
+            width: 100%;
+            border: 1px solid $color-table-border;
+        }
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .table {
+    
+        &-small {
+            width: 80%;
+            border: 1px solid $color-table-border;
+        }
+    }
+    
+}
+
+@media (max-width: 576px) {
+    .table {
+    
+        &-small {
+            width: 80%;
+            border: 1px solid $color-table-border;
+        
+        .h3 { font-size: 1.2rem; }
+
+        td { padding: .2rem; }
+    }
+
+        &-title-small { font-size: 1.2rem; }
+    } 
+}
+
+

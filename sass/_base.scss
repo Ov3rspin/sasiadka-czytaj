@@ -1,0 +1,81 @@
+
+//// GLOBAL SETTINGS
+
+    $color-primary: #4db848;
+    $color-primary-light: #4a5e3979;
+    $color-primary-dark: #5b8200;
+    $color-white: #fff;
+    
+    $color-table-border: #dbdbdb;
+
+    $color-grey-light-1: #faf9f9;
+    $color-grey-light-2: #f4f2f2;
+    $color-grey-light-3: #f0eeee;
+    $color-grey-light-4: #ccc;
+
+    $color-grey-dark-1: #333;
+    $color-grey-dark-2: #777;
+    $color-grey-dark-3: #999;
+
+    $shadow-dark: 0 2rem 5rem rgba(0,0,0,.2);
+    $shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    $line: 1px solid var(--color-grey-light-2);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px, 10/16px = 62.5%
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Lato',sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    background-color: $color-white;
+    height: 100vh;
+}
+
+.h1 {
+    font-size: 6rem;
+    color: $color-primary;
+}
+
+.h2 {
+    font-size: 3rem;
+    color: $color-primary;
+}
+
+.h3 {
+    font-size: 3rem;
+    color: $color-primary-dark;
+}
+
+.h4 {
+    font-size: 2rem;
+    color: $color-primary;
+}
+
+.button-main {
+    background-color: $color-primary;
+    font-size: 1.5rem;
+    color: $color-white;
+    width: 50%;
+    margin-left: 25%;
+    border-radius: 10px;
+    padding: {
+        top: 1.5rem;
+        bottom: 1.5rem;
+    }
+}
