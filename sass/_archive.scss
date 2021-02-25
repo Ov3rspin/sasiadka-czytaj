@@ -7,6 +7,10 @@
         border-radius: 10px;
         position: relative;
         padding: 1.1rem;
+        margin: {
+            left: 1rem;
+            right: 1rem;
+        }
 
         &-old {
             display: flex;
@@ -17,7 +21,16 @@
             border-radius: 10px;
             height: 104px;
             padding: 1.1rem;
+            margin: {
+                left: 1rem;
+                right: 1rem;
+            }
         }        
+    }
+
+    .btn-mobile {
+        display: none;
+        visibility: hidden;
     }
 
     &-img {
@@ -54,21 +67,28 @@
         display: flex;
         flex-direction: column;
         border-radius: 10px;
+    }
 
-        button {
-            border-radius: 10px;
-            background-color: $color-primary;
-            font-size: 3rem;
-
-            a {
-                text-decoration: none;
-                color: $color-white;
-
-                i { margin-left: 1.5rem; }
+    &-date {
+            padding-left: 1rem;
+            h2 {
+                font-size: 2.5rem;
             }
-        }
     }
 }
+
+.btn-archive {
+    width: auto;
+    font-size: 2rem;
+    margin: {
+        left: 1rem;
+        right: 1rem;
+    }
+
+    i { margin-left: 1.5rem; }
+}
+
+// STYLING FOR CARDS - MAIN PAGE
 
 .card {
     border: none;
@@ -125,18 +145,16 @@
             i{ color: $color-primary; }    
         }       
 
-    &:hover &-side--front {
-        opacity: .2;
-    }
+    &:hover &-side--front { opacity: .2; }
 
-    &:hover &-side--back {
-        opacity: 1;
-    }
+    &:hover &-side--back { opacity: 1; }
 }
 
 @media (max-width: 991px) {
     .archive {
         margin-bottom: 5rem;
+
+        &-old { display: none; }
     
         &-title {
             text-align: center;
@@ -145,12 +163,30 @@
             position: relative;
             padding: 1.1rem;
     
-    
             &-old {
                 height: auto;
                 margin-top: 3rem;
             }        
         }
+
+        .btn-mobile {
+            display: block;
+            visibility:visible;
+            width: 80%;
+            margin: {
+                left: auto;
+                right: auto;
+                top: 1rem;
+            }
+        }
+
+        &-date {
+            h2 {
+                font-size: 2rem;
+                padding-top: 1rem;
+            }
+    }
+
     }
 
     .card {
@@ -189,5 +225,14 @@
 
             i{ font-size: 2.5rem; }    
         }       
+    }
+}
+
+@media (max-width: 576px) {
+    .archive {
+        &-date {
+            justify-content: center;
+            align-items: center;
+        }
     }
 }

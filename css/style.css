@@ -44,6 +44,12 @@ body {
   border-radius: 10px;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem; }
+  .button-main:hover {
+    color: #fff; }
+
+.active {
+  background-color: #4db848;
+  color: #fff !important; }
 
 .hero {
   height: 80vh;
@@ -54,12 +60,23 @@ body {
   height: 10vh;
   font-size: 2rem;
   color: #fff; }
+  .navbar-archive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .navbar-archive ul {
+      flex-direction: row;
+      font-size: 1.5rem;
+      margin-left: 0; }
+      .navbar-archive ul li {
+        padding: 0; }
+        .navbar-archive ul li a {
+          padding: 0; }
   .navbar-brand {
     font-size: 3rem;
     color: #4db848; }
     .navbar-brand:hover {
-      color: #4db848;
-      transform: scale(1.01); }
+      color: #4db848; }
   .navbar-toggler {
     position: relative;
     top: .5rem;
@@ -90,6 +107,20 @@ body {
     background-position: 100%;
     color: #fff;
     transform: translateX(1rem); }
+  .navbar i {
+    color: #999;
+    font-size: 3rem;
+    margin-left: 1rem;
+    margin-right: 2rem; }
+    .navbar i:hover, .navbar i:active {
+      color: #4db848;
+      cursor: pointer; }
+
+@media (max-width: 991px) {
+  .navbar i {
+    margin-left: 3rem; }
+  .navbar img {
+    margin-bottom: 2rem; } }
 
 .about {
   background-color: #fff;
@@ -137,7 +168,7 @@ body {
       overflow: hidden;
       border-radius: 10px; }
     .about-map img {
-      height: 83%;
+      height: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -152,7 +183,7 @@ body {
     .about-map div {
       height: 68%; } }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .about {
     padding-bottom: 10rem; }
     .about-box {
@@ -160,17 +191,25 @@ body {
       flex-direction: column; }
     .about-map {
       position: relative;
-      height: auto;
-      max-width: 100%; }
+      height: 295px;
+      width: 100%;
+      margin-top: 3rem; }
       .about-map div {
-        position: absolute;
+        position: relative;
         height: auto;
-        max-width: 100%;
-        display: block; }
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 1rem; }
       .about-map img {
         height: auto;
         width: auto;
-        position: absolute; } }
+        position: relative;
+        transform: translate(0%, 0%);
+        top: 0%;
+        left: 0%;
+        margin-left: auto;
+        margin-right: auto; } }
 
 .archive {
   margin-bottom: 5rem; }
@@ -179,7 +218,9 @@ body {
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     position: relative;
-    padding: 1.1rem; }
+    padding: 1.1rem;
+    margin-left: 1rem;
+    margin-right: 1rem; }
     .archive-title-old {
       display: flex;
       justify-content: center;
@@ -188,7 +229,12 @@ body {
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
       border-radius: 10px;
       height: 104px;
-      padding: 1.1rem; }
+      padding: 1.1rem;
+      margin-left: 1rem;
+      margin-right: 1rem; }
+  .archive .btn-mobile {
+    display: none;
+    visibility: hidden; }
   .archive-img {
     margin-right: 2rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
@@ -217,15 +263,18 @@ body {
     display: flex;
     flex-direction: column;
     border-radius: 10px; }
-    .archive-old button {
-      border-radius: 10px;
-      background-color: #4db848;
-      font-size: 3rem; }
-      .archive-old button a {
-        text-decoration: none;
-        color: #fff; }
-        .archive-old button a i {
-          margin-left: 1.5rem; }
+  .archive-date {
+    padding-left: 1rem; }
+    .archive-date h2 {
+      font-size: 2.5rem; }
+
+.btn-archive {
+  width: auto;
+  font-size: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem; }
+  .btn-archive i {
+    margin-left: 1.5rem; }
 
 .card {
   border: none;
@@ -277,6 +326,8 @@ body {
 @media (max-width: 991px) {
   .archive {
     margin-bottom: 5rem; }
+    .archive-old {
+      display: none; }
     .archive-title {
       text-align: center;
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
@@ -286,6 +337,16 @@ body {
       .archive-title-old {
         height: auto;
         margin-top: 3rem; }
+    .archive .btn-mobile {
+      display: block;
+      visibility: visible;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem; }
+    .archive-date h2 {
+      font-size: 2rem;
+      padding-top: 1rem; }
   .card {
     width: 80%;
     margin-left: auto;
@@ -309,6 +370,11 @@ body {
       top: 0rem; }
       .card-icons i {
         font-size: 2.5rem; } }
+
+@media (max-width: 576px) {
+  .archive-date {
+    justify-content: center;
+    align-items: center; } }
 
 .adv {
   margin-top: 10rem;
@@ -522,6 +588,49 @@ body {
     width: 90%;
     margin-left: 1rem; } }
 
+.adv-popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000a8;
+  z-index: 999;
+  opacity: 1;
+  visibility: visible;
+  transition: all .5s; }
+  .adv-popup:target {
+    opacity: 0;
+    display: none;
+    visibility: hidden; }
+  .adv-popup-close:link, .adv-popup-close:visited {
+    color: #4db848;
+    position: absolute;
+    top: 1.5rem;
+    right: 3.5rem;
+    font-size: 4rem;
+    text-decoration: none;
+    display: inline-block; }
+  .adv-popup-close:hover {
+    transform: scale(1.1); }
+  .adv-popup-box {
+    position: relative;
+    transition: all .2s;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    height: 100%; }
+    .adv-popup-box div {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    .adv-popup-box img {
+      height: 90%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute; }
+
 .table {
   width: 100%;
   border: 1px solid #dbdbdb;
@@ -567,52 +676,58 @@ body {
   .table-title-small {
     font-size: 1.2rem; } }
 
-.contact {
+.contact-1, .contact-2, .contact-3 {
+  margin-bottom: 3rem; }
+
+.contact .row {
+  align-items: stretch;
+  justify-content: center;
   margin-bottom: 10rem; }
-  .contact .row {
-    align-items: stretch;
-    justify-content: center; }
-  .contact .h2 {
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-    padding: 1.1rem;
-    border-radius: 10px;
+
+.contact .h2 {
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  padding: 1.1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 3rem; }
+
+.contact .h4 {
+  text-align: center;
+  margin-bottom: 1rem; }
+
+.contact .col-lg-3 .h4 {
+  margin-bottom: 3rem; }
+
+.contact-card {
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 2rem;
+  height: 31.5rem; }
+  .contact-card div {
+    display: flex;
+    align-items: center;
+    margin-left: 10%; }
+  .contact-card p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+    display: inline-block;
+    line-height: 1.5; }
+  .contact-card svg {
+    height: 2rem;
+    width: 2rem;
+    fill: #4db848;
+    margin-right: 3rem; }
+  .contact-card .h3 {
     text-align: center;
-    margin-bottom: 3rem; }
-  .contact .h4 {
-    text-align: center;
-    margin-bottom: 1rem; }
-  .contact .col-lg-3 .h4 {
-    margin-bottom: 3rem; }
-  .contact-card {
-    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 2rem;
-    height: 31.5rem; }
-    .contact-card div {
-      display: flex;
-      align-items: center;
-      margin-left: 10%; }
-    .contact-card p {
-      margin-top: 1rem;
-      font-size: 1.4rem;
-      width: 100%;
-      display: inline-block;
-      line-height: 1.5; }
-    .contact-card svg {
-      height: 2rem;
-      width: 2rem;
-      fill: #4db848;
-      margin-right: 3rem; }
-    .contact-card .h3 {
-      text-align: center;
-      margin-bottom: 1rem;
-      font-size: 1.5rem; }
-    .contact-card a {
-      text-decoration: none;
-      cursor: pointer;
-      color: #5b8200;
-      margin-top: 1rem;
-      font-size: 1.4rem; }
+    margin-bottom: 1rem;
+    font-size: 1.5rem; }
+  .contact-card a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #5b8200;
+    margin-top: 1rem;
+    font-size: 1.4rem; }
 
 @media (max-width: 991px) {
   .contact-1 {

@@ -78,4 +78,13 @@ body {
         top: 1.5rem;
         bottom: 1.5rem;
     }
+
+    &:hover {
+        color: $color-white;
+    }
+}
+
+.active {
+    background-color: $color-primary;
+    color: $color-white !important;
 }

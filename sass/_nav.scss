@@ -5,15 +5,32 @@
     font-size: 2rem;
     color: $color-white;
 
+    &-archive {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        ul {
+            flex-direction: row;
+            font-size: 1.5rem;
+            margin-left: 0;
+            
+            li {
+                padding: 0;
+                a { padding: 0; }
+            }
+        }
+    }
+
     &-brand {
         font-size: 3rem;
         color: $color-primary;
-        
+
         &:hover {
             color: $color-primary;
-            transform: scale(1.01);
         }
     }
+
     &-toggler {
         position: relative;
         top: .5rem;
@@ -58,4 +75,23 @@
         color: $color-white;
         transform: translateX(1rem);
     }
+
+    i {
+        color: $color-grey-dark-3;
+        font-size: 3rem;
+        margin-left: 1rem;
+        margin-right: 2rem;
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar { 
+        i { margin-left: 3rem}
+        img { margin-bottom: 2rem; } }
 }
